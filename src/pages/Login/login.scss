@@ -1,0 +1,25 @@
+.login {
+  .menu-wrapper {
+    display: flex;
+
+    .item-wrapper {
+      margin: 0px 15px;
+
+      .menu-item {
+        background-color: white;
+        font-size: 15px;
+        color: black;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .menu-item:hover {
+        opacity: 1;
+        background-color: #00bcd4;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
