@@ -1,12 +1,9 @@
 import React from "react";
-import "./App.css";
 import { Routes } from "./configs";
-
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes />
-      {/* Coba dulu */}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MainApp, Login } from "../../pages";
+import { Login, LoggedInPage } from "../../pages";
 const Routes = () => {
   return (
     <Router>
@@ -9,7 +9,7 @@ const Routes = () => {
           <Login />
         </Route>
         <Route path="/">
-          <MainApp />
+          <LoggedInPage />
         </Route>
       </Switch>
     </Router>

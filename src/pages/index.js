@@ -1,5 +1,10 @@
-import Home from "./Home";
+import Sidebar from "./Sidebar";
 import Login from "./Login";
-import MainApp from "./MainApp";
+import Dashboard from "./Dashboard";
+import Customer from "./Customer";
+import Jabatan from "./Jabatan";
+import PO from "./PurchaseOrder";
+import Supplier from "./Supplier";
+import LoggedInPage from "./LoggedInPage";
 
-export { Home, Login, MainApp };
+export { Sidebar, Login, Dashboard, Customer, Jabatan, PO, Supplier, LoggedInPage };
