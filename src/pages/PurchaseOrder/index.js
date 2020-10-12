@@ -1,5 +1,6 @@
 import React from 'react'
-import { Table, Row, Col, Button, Input, Modal, Space, DatePicker} from 'antd';
+import { Table, Row, Col, Button, Input, Modal, Space, DatePicker, Typography} from 'antd';
+import { DownloadOutlined } from '@ant-design/icons';
 const { Column } = Table;
 const PO = () => {
   const [visible, setVisible] = React.useState(false);
@@ -7,19 +8,19 @@ const PO = () => {
     data.push(
     {
       key: 1,
-      date: `01/01/2020`,
+      date: `2020/01/01`,
       po: `PO-00123456`,
       vendor: "Testing",
-      deliveryDate: `28/01/2020`,
+      deliveryDate: `2020/01/28`,
       status: `In Progrres`,
       amount: "Rp. 500.000",
     },
     {
         key: 2,
-        date: `01/01/2020`,
+        date: `2020/01/01`,
         po: `PO-00123456`,
         vendor: "Testing",
-        deliveryDate: `28/01/2020`,
+        deliveryDate: `2020/01/28`,
         status: `In Progrres`,
         amount: "Rp. 500.000",
       },
@@ -27,45 +28,39 @@ const PO = () => {
 const handleModal = React.useCallback(() => {
     setVisible(item => !item);
 }, [])
-// showModal = () => {
-//   this.setState({
-//     visible: true,
-//   });
-// };
-
-// const handleButton = React.useCallback(() => {
-//     setVis
-// })
 const handleOk = e => {
   console.log(e);
   setVisible(false);
 };
-
 const handleCancel = e => {
   console.log(e);
   setVisible(false);
 };
-
 function onChange(date, dateString) {
     console.log(date, dateString);
 }
-
     return (
-        <div style={{margin: "30px", width: "100%", minWidth: "300px"}} >
-            <h1>Purchase Order</h1>
+        <div style={{margin: "30px"}} >
+            <Typography.Title level={4} >Purchase Order</Typography.Title>
             <Row align="middle" justify="space-between" style={{marginBottom: "20px"}}>
                 <Col>
-                    <Input placeholder="Search by vendor.." />
+                    <Button type="primary" shape="round" icon={<DownloadOutlined />}>Cetak</Button>
                 </Col>
                 <Col>
-                    <Button type="primary" onClick={handleModal}>
-                        New Purshase Order
-                    </Button>
+                <Row gutter={12}>
+                    <Col>
+                        <Input placeholder="Search by vendor.."  />
+                    </Col>
+                    <Col>
+                        <Button type="primary" onClick={handleModal}>
+                        + Create New PO
+                        </Button>
+                    </Col>
                     <Modal
-                    title="New Purshase Order"
-                    visible={visible}
-                    onOk={handleOk}
-                    onCancel={handleCancel}
+                        title="New Purshase Order"
+                        visible={visible}
+                        onOk={handleOk}
+                        onCancel={handleCancel}
                     >
                     <DatePicker onChange={onChange} style={{width: "100%"}} /> <br /> <br />
                     <Input placeholder="Input Purchase Order" /> <br /> <br />
@@ -74,6 +69,7 @@ function onChange(date, dateString) {
                     <Input placeholder="Input Status" /> <br /> <br />
                     <Input placeholder="Input Amount" /> <br />
                     </Modal>
+                    </Row>
                 </Col>
             </Row>
             <Table dataSource={data} >

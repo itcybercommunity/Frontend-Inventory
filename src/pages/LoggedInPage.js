@@ -1,17 +1,17 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { Footer, Header } from "../components";
-import {Customer, Jabatan, Sidebar, Dashboard, PO, Supplier} from "../pages";
+import { Header } from "../components";
+import {Customer, Jabatan, Sidebar, Dashboard, PO, Supplier, Login} from "../pages";
 import {Row, Col } from "antd";
 const LoggedInPage = () => {
     return (
-        <Router>          
+        <Router>      
         <Header />
             <Row >
                 <Col>
                     <Sidebar />
-                </Col>
-                <Col span={19}>
+                </Col> 
+                <Col span={20}>
                     <Switch>
                     <Route path="/dashboard" component={ Dashboard }/>
                     <Route path="/customer" component={ Customer }/>
@@ -22,7 +22,6 @@ const LoggedInPage = () => {
                     </Switch>
                 </Col>
             </Row>
-            <Footer />
         </Router>
     )
 }
