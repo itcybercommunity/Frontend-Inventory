@@ -7,23 +7,23 @@ const PO = () => {
   const data = [];
     data.push(
     {
-      key: 1,
-      date: `2020/01/01`,
-      po: `PO-00123456`,
-      vendor: "Testing",
-      deliveryDate: `2020/01/28`,
-      status: `In Progrres`,
-      amount: "Rp. 500.000",
+      id_supplier: "PO-00123456",
+      id_employment:"PO-00123456",
+      faktur: "coba dulu",
+      date: "2020/01/01",
+      total: "PO-00123456",
+      status: "In Progrres",
+      total: "Rp. 500.000",
     },
     {
-        key: 2,
-        date: `2020/01/01`,
-        po: `PO-00123456`,
-        vendor: "Testing",
-        deliveryDate: `2020/01/28`,
-        status: `In Progrres`,
-        amount: "Rp. 500.000",
-      },
+        id_supplier: "PO-00123456",
+        id_employment:"PO-00123456",
+        faktur: "coba dulu",
+        date: "2020/01/01",
+        total: "PO-00123456",
+        status: "In Progrres",
+        total: "Rp. 500.000",
+    },
 );
 const handleModal = React.useCallback(() => {
     setVisible(item => !item);
@@ -63,22 +63,23 @@ function onChange(date, dateString) {
                         onCancel={handleCancel}
                     >
                     <DatePicker onChange={onChange} style={{width: "100%"}} /> <br /> <br />
-                    <Input placeholder="Input Purchase Order" /> <br /> <br />
-                    <Input placeholder="Input Vendor" /> <br /> <br />
-                    <DatePicker onChange={onChange} style={{width: "100%"}} placeholder="Select Delivery Date" /> <br /> <br />
+                    <Input placeholder="Input Id Supplier" /> <br /> <br />
+                    <Input placeholder="Input Id Employment" /> <br /> <br />
+                    <Input placeholder="Input Faktur" /> <br /> <br />
+                    <Input placeholder="Input Total" /> <br /> <br />
+                    <DatePicker onChange={onChange} style={{width: "100%"}} placeholder="Select Date" /> <br /> <br />
                     <Input placeholder="Input Status" /> <br /> <br />
-                    <Input placeholder="Input Amount" /> <br />
                     </Modal>
                     </Row>
                 </Col>
             </Row>
             <Table dataSource={data} >
+                <Column title="Id Supplier" dataIndex="id_supplier" key="id_supplier" />
+                <Column title="Id Employment" dataIndex="id_employment" key="id_employment" />
+                <Column title="Faktur" dataIndex="faktur" key="faktur" />
+                <Column title="Total" dataIndex="total" key="total" />
                 <Column title="Date" dataIndex="date" key="date" />
-                <Column title="Purchase Order" dataIndex="po" key="po" />
-                <Column title="Vendor" dataIndex="vendor" key="vendor" />
-                <Column title="Delivery Date" dataIndex="deliveryDate" key="deliveryDate" />
                 <Column title="Status" dataIndex="status" key="status" />
-                <Column title="Amount" dataIndex="amount" key="amount" />
                 <Column
                     title="Action"
                     key="action"

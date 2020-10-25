@@ -13,12 +13,12 @@ const LoggedInPage = () => {
                 </Col> 
                 <Col span={20}>
                     <Switch>
-                    <Route path="/dashboard" component={ Dashboard }/>
-                    <Route path="/customer" component={ Customer }/>
-                    <Route path="/jabatan" component={ Jabatan }/>
-                    <Route path="/po" component={ PO }/>
-                    <Route path="/supplier" component={ Supplier }/>
-                    <Redirect to="/dashboard" />
+                    {/* <Route exact path="/dashboard" component={ Dashboard }/> */}
+                    <Route exact path="/customer" component={ Customer }/>
+                    <Route exact path="/jabatan" component={ Jabatan }/>
+                    <Route exact path="/po" component={ PO }/>
+                    <Route exact path="/supplier" component={ Supplier }/>
+                    <Redirect to="/po" />
                     </Switch>
                 </Col>
             </Row>

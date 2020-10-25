@@ -6,20 +6,14 @@ const Supplier = () => {
         const data = [];
         data.push(
         {
-            key: 1,
-            kodeSuplier: `0001234`,
-            namaSuplier: `PT Pakar`,
-            alamat: "Jl. Bumi resik no.5",
-            kota: `Lumajang, Jawa Timur`,
-            noTelp: `+62 8645`,
+            id: "1234",
+            name: `PT Pakar`,
+            address: "Jl. Bumi resik no.5",
         },
         {
-            key: 2,
-            kodeSuplier: `0001234`,
-            namaSuplier: `PT Pakar`,
-            alamat: "Jl. Bumi resik no.5",
-            kota: `Lumajang, Jawa Timur`,
-            noTelp: `+62 8645`,
+            id: "1234",
+            name: `PT Pakar`,
+            address: "Jl. Bumi resik no.5",
         },
     );
     const handleModal = React.useCallback(() => {
@@ -34,7 +28,7 @@ const Supplier = () => {
       setVisible(false);
     };
     return (
-        <>
+        <div style={{margin: "30px"}}>
             <Row align="middle" justify="space-between" style={{margin: "20px"}}>
                 <Col>
                     <Typography.Title level={4} >Supplier</Typography.Title>
@@ -55,22 +49,18 @@ const Supplier = () => {
                         onOk={handleOk}
                         onCancel={handleCancel}
                     >
-                    <Input placeholder="Input Kode Supplier" /> <br /> <br />
-                    <Input placeholder="Input Nama" /> <br /> <br />
-                    <Input placeholder="Input Alamat" /> <br /> <br />
-                    <Input placeholder="Input Kota" /> <br /> <br />
-                    <Input placeholder="Input Nomer Telephon" /> <br /> <br />
+                    <Input placeholder="Input Id" /> <br /> <br />
+                    <Input placeholder="Input Name" /> <br /> <br />
+                    <Input placeholder="Input Address" /> <br /> <br />
                     </Modal>
                     </Row>
                 </Col>
                 </Row>
 
             <Table dataSource={data} >
-                <Column title="Kode Suplier" dataIndex="kodeSuplier" key="kodeSuplier" />
-                <Column title="Nama Suplier" dataIndex="namaSuplier" key="namaSuplier" />
-                <Column title="Alamat" dataIndex="alamat" key="alamat" />
-                <Column title="Kota" dataIndex="kota" key="kota" />
-                <Column title="Nomor Telephon" dataIndex="noTelp" key="noTelp" />
+                <Column title="Id" dataIndex="id" key="id" />
+                <Column title="Name" dataIndex="name" key="name" />
+                <Column title="Address" dataIndex="address" key="address" />
                 <Column
                     title="Action"
                     key="action"
@@ -82,7 +72,7 @@ const Supplier = () => {
                     )}
                 />
             </Table>
-        </>
+        </div>
     )
 }
 

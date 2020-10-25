@@ -8,19 +8,17 @@ import {
   BankOutlined,
   IdcardOutlined
 } from '@ant-design/icons';
-import { useHistory, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+const { Sider, Content } = Layout;
 const Sidebar = ({menu}) => {
 
-  const { Sider, Content } = Layout;
-  const history = useHistory();
   return (
     <>
     <Sider theme="dark" style={{height: "100vh"}}>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
-        <Menu.Item key="1" icon={<HomeOutlined />}>
+        {/* <Menu.Item key="1" icon={<HomeOutlined />}>
           <Link to="/dashboard">Dashboard</Link>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="2" icon={<ShoppingOutlined />}>
           <Link to="/po">Purchase Order</Link>
         </Menu.Item>
