@@ -34,7 +34,7 @@ const Sidebar = ({ menu }) => {
             <Link to="/customer">Customer</Link>
           </Menu.Item>
           <Menu.Item key="7" icon={<TeamOutlined />}>
-            Pegawai
+          <Link to="/pegawai">Pegawai</Link>
           </Menu.Item>
           <Menu.Item key="8" icon={<IdcardOutlined />}>
             <Link to="/jabatan">Jabatan</Link>

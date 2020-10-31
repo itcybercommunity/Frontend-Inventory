@@ -6,6 +6,7 @@ import Jabatan from "./Jabatan";
 import PO from "./PurchaseOrder";
 import Supplier from "./Supplier";
 import LoggedInPage from "./LoggedInPage";
+import Pegawai from "./Pegawai";
 
 export {
   Sidebar,
@@ -16,4 +17,5 @@ export {
   PO,
   Supplier,
   LoggedInPage,
+  Pegawai
 };
