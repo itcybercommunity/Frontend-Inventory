@@ -7,4 +7,13 @@ import PO from "./PurchaseOrder";
 import Supplier from "./Supplier";
 import LoggedInPage from "./LoggedInPage";
 
-export { Sidebar, Login, Dashboard, Customer, Jabatan, PO, Supplier, LoggedInPage };
+export {
+  Sidebar,
+  Login,
+  Dashboard,
+  Customer,
+  Jabatan,
+  PO,
+  Supplier,
+  LoggedInPage,
+};

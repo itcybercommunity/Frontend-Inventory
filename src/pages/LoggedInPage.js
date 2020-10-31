@@ -1,29 +1,42 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { Header } from "../components";
-import {Customer, Jabatan, Sidebar, Dashboard, PO, Supplier, Login} from "../pages";
-import {Row, Col } from "antd";
+import {
+  Customer,
+  Jabatan,
+  Sidebar,
+  Dashboard,
+  PO,
+  Supplier,
+  Login,
+} from "../pages";
+import { Row, Col } from "antd";
 const LoggedInPage = () => {
-    return (
-        <Router>      
-        <Header />
-            <Row >
-                <Col>
-                    <Sidebar />
-                </Col> 
-                <Col span={20}>
-                    <Switch>
-                    {/* <Route exact path="/dashboard" component={ Dashboard }/> */}
-                    <Route exact path="/customer" component={ Customer }/>
-                    <Route exact path="/jabatan" component={ Jabatan }/>
-                    <Route exact path="/po" component={ PO }/>
-                    <Route exact path="/supplier" component={ Supplier }/>
-                    <Redirect to="/po" />
-                    </Switch>
-                </Col>
-            </Row>
-        </Router>
-    )
-}
+  return (
+    <Router>
+      <Header />
+      <Row>
+        <Col>
+          <Sidebar />
+        </Col>
+        <Col span={20}>
+          <Switch>
+            {/* <Route exact path="/dashboard" component={ Dashboard }/> */}
+            <Route exact path="/customer" component={Customer} />
+            <Route exact path="/jabatan" component={Jabatan} />
+            <Route exact path="/po" component={PO} />
+            <Route exact path="/supplier" component={Supplier} />
+            <Redirect to="/po" />
+          </Switch>
+        </Col>
+      </Row>
+    </Router>
+  );
+};
 
-export default LoggedInPage
+export default LoggedInPage;
