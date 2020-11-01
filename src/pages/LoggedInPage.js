@@ -16,7 +16,7 @@ import {
   Login,
   Pegawai,
   Penjualan,
-  TranksaksiPenjualan
+  TranksaksiPenjualan,
 } from "../pages";
 import { Row, Col } from "antd";
 const LoggedInPage = () => {
@@ -36,7 +36,11 @@ const LoggedInPage = () => {
             <Route exact path="/po" component={PO} />
             <Route exact path="/supplier" component={Supplier} />
             <Route exact path="/jual" component={Penjualan} />
-            <Route exact path="/jual/transaksi" component={TranksaksiPenjualan} />
+            <Route
+              exact
+              path="/jual/transaksi"
+              component={TranksaksiPenjualan}
+            />
             <Redirect to="/po" />
           </Switch>
         </Col>

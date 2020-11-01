@@ -13,7 +13,7 @@ const { Sider, Content } = Layout;
 const Sidebar = ({ menu }) => {
   return (
     <>
-      <Sider theme="dark" style={{ height: "100vh"}}>
+      <Sider theme="dark" style={{ height: "100vh" }}>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           {/* <Menu.Item key="1" icon={<HomeOutlined />}>
           <Link to="/dashboard">Dashboard</Link>
@@ -37,7 +37,7 @@ const Sidebar = ({ menu }) => {
             <Link to="/customer">Customer</Link>
           </Menu.Item>
           <Menu.Item key="7" icon={<TeamOutlined />}>
-          <Link to="/pegawai">Pegawai</Link>
+            <Link to="/pegawai">Pegawai</Link>
           </Menu.Item>
           <Menu.Item key="8" icon={<IdcardOutlined />}>
             <Link to="/jabatan">Jabatan</Link>

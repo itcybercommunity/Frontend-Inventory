@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Table,
-  Row,
-  Col,
-  Button,
-  Input,
-  Modal,
-  Space,
-  Typography,
-} from "antd";
+import { Table, Row, Col, Button, Input, Modal, Space, Typography } from "antd";
 const { Column } = Table;
 
 const Pegawai = () => {

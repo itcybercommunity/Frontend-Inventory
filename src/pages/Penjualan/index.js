@@ -50,7 +50,7 @@ const Penjualan = () => {
     console.log(date, dateString);
   }
   return (
-    <div style={{ margin: "30px", color: '#fff' }}>
+    <div style={{ margin: "30px", color: "#fff" }}>
       <Typography.Title level={4}>Penjualan</Typography.Title>
       <Row
         align="middle"
