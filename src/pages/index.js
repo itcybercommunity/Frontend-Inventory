@@ -7,6 +7,8 @@ import PO from "./PurchaseOrder";
 import Supplier from "./Supplier";
 import LoggedInPage from "./LoggedInPage";
 import Pegawai from "./Pegawai";
+import Penjualan from "./Penjualan";
+import TranksaksiPenjualan from "./Penjualan/TranksaksiPenjualan"
 
 export {
   Sidebar,
@@ -17,5 +19,7 @@ export {
   PO,
   Supplier,
   LoggedInPage,
-  Pegawai
+  Pegawai,
+  Penjualan,
+  TranksaksiPenjualan
 };

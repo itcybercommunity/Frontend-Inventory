@@ -13,7 +13,7 @@ const { Sider, Content } = Layout;
 const Sidebar = ({ menu }) => {
   return (
     <>
-      <Sider theme="dark" style={{ height: "100vh" }}>
+      <Sider theme="dark" style={{ height: "100vh"}}>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           {/* <Menu.Item key="1" icon={<HomeOutlined />}>
           <Link to="/dashboard">Dashboard</Link>
@@ -22,8 +22,11 @@ const Sidebar = ({ menu }) => {
             <Link to="/po">Purchase Order</Link>
           </Menu.Item>
           <Menu.Item key="3" icon={<ShoppingOutlined />}>
-            Penjualan
+            <Link to="/jual">Penjualan</Link>
           </Menu.Item>
+          {/* <Menu.Item key="3" icon={<ShoppingOutlined />}>
+            <Link to="/jual/transaksi">Transaksi Penjualan</Link>
+          </Menu.Item> */}
           <Menu.Item key="4" icon={<BankOutlined />}>
             Gudang
           </Menu.Item>
