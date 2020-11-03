@@ -30,12 +30,12 @@ const LoggedInPage = () => {
         <Col span={20}>
           <Switch>
             {/* <Route exact path="/dashboard" component={ Dashboard }/> */}
-            <Route exact path="/" component={PO} />
-            <Route exact path="/customer" component={Customer} />
-            <Route exact path="/pegawai" component={Pegawai} />
-            <Route exact path="/jabatan" component={Jabatan} />
-            <Route exact path="/supplier" component={Supplier} />
-            <Route exact path="/jual" component={Penjualan} />
+            <Route path="/loggedin" component={PO} />
+            <Route path="/customer" component={Customer} />
+            <Route path="/pegawai" component={Pegawai} />
+            <Route path="/jabatan" component={Jabatan} />
+            <Route path="/supplier" component={Supplier} />
+            <Route path="/jual" component={Penjualan} />
             <Route
               exact
               path="/jual/transaksi"

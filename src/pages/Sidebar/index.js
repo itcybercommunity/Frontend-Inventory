@@ -19,7 +19,7 @@ const Sidebar = ({ menu }) => {
           <Link to="/dashboard">Dashboard</Link>
         </Menu.Item> */}
           <Menu.Item key="2" icon={<ShoppingOutlined />}>
-            <Link to="/po">Purchase Order</Link>
+            <Link to="/loggedin">Purchase Order</Link>
           </Menu.Item>
           <Menu.Item key="3" icon={<ShoppingOutlined />}>
             <Link to="/jual">Penjualan</Link>
