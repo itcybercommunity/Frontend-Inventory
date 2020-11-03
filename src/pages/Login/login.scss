@@ -1,25 +1,32 @@
-.login {
-  .menu-wrapper {
+.loginAndReg-page {
     display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+}
 
-    .item-wrapper {
-      margin: 0px 15px;
+.left {
+    flex: 1;
+    background-color: gray;
 
-      .menu-item {
-        background-color: white;
-        font-size: 15px;
-        color: black;
-        padding: 10px;
-        cursor: pointer;
-      }
-
-      .menu-item:hover {
-        opacity: 1;
-        background-color: #00bcd4;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-      }
+    .bg-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-  }
+}
+
+.right {
+    width: 460px;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2D2D2D;
+    }
 }

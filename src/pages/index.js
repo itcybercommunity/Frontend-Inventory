@@ -1,5 +1,6 @@
 import Sidebar from "./Sidebar";
 import Login from "./Login";
+import Register from "./Register";
 import Dashboard from "./Dashboard";
 import Customer from "./Customer";
 import Jabatan from "./Jabatan";
@@ -13,6 +14,7 @@ import TranksaksiPenjualan from "./Penjualan/TranksaksiPenjualan";
 export {
   Sidebar,
   Login,
+  Register,
   Dashboard,
   Customer,
   Jabatan,

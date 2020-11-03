@@ -30,10 +30,10 @@ const LoggedInPage = () => {
         <Col span={20}>
           <Switch>
             {/* <Route exact path="/dashboard" component={ Dashboard }/> */}
+            <Route exact path="/" component={PO} />
             <Route exact path="/customer" component={Customer} />
             <Route exact path="/pegawai" component={Pegawai} />
             <Route exact path="/jabatan" component={Jabatan} />
-            <Route exact path="/po" component={PO} />
             <Route exact path="/supplier" component={Supplier} />
             <Route exact path="/jual" component={Penjualan} />
             <Route
@@ -41,7 +41,6 @@ const LoggedInPage = () => {
               path="/jual/transaksi"
               component={TranksaksiPenjualan}
             />
-            <Redirect to="/po" />
           </Switch>
         </Col>
       </Row>

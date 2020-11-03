@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Row, Col, Typography, Layout } from "antd";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./header.scss";
 
 const Header = () => {
@@ -18,8 +18,8 @@ const Header = () => {
           </Typography.Title>
         </Col>
         <Col>
-          <Button type="primary" onClick={() => history.push("/login")}>
-            <Link to="/login">Logout</Link>
+          <Button type="primary"  onClick={() => history.push('/login')}>
+          Logout
           </Button>
         </Col>
       </Row>

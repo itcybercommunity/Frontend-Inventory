@@ -1,28 +1,30 @@
-import React from 'react'
-import './login.scss';
-import { LoginBg } from '../../assets';
+import React from 'react';
+import '../Login/login.scss';
+import { RegisterBg } from '../../assets';
 import { Input, Button, Gap, Link } from '../../components';
 import {useHistory} from 'react-router-dom'
 
-const Login = () => {
+const Register = () => {
     const history = useHistory();
     return (
         <div className="loginAndReg-page">
             <div className="left">
-                <img src={LoginBg} className="bg-image" alt="imageBg" />
+                <img src={RegisterBg} className="bg-image" alt="imageBg" />
             </div>
             <div className="right">
-                <p className="title">Login</p>
+                <p className="title">Register</p>
+                <Input label="Full Name" placeholder="Full Name" />
+                <Gap height={18} />
                 <Input label="Email" placeholder="Email"/>
                 <Gap height={18} />
                 <Input label="Password" placeholder="Password"/>
                 <Gap height={50} />
-                <Button title="Login" onClick={() => history.push('/')} />
+                <Button title="Register" onClick={() => history.push('/login')} />
                 <Gap height={100} />
-                <Link title="Belum punya akun, silahkan daftar" onClick={() => history.push('/register')} />
+                <Link title="Kembali ke Login" onClick={() => history.push('/login')} />
             </div>
         </div>
     )
 }
 
-export default Login
+export default Register
